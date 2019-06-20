@@ -19,14 +19,17 @@ SOURCES += src/Mount.cpp
 DISTFILES += qml/Mount.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/Mount.changes.in \
     rpm/Mount.changes.run.in \
     rpm/Mount.spec \
     rpm/Mount.yaml \
     translations/*.ts \
     Mount.desktop \
-    qml/storage.js
+    qml/storage.js \
+    qml/pages/About.qml \
+    qml/pages/AddEntry.qml \
+    qml/pages/EditEntry.qml \
+    qml/pages/Help_davfs.qml
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
@@ -39,3 +42,6 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/Mount-de.ts
+
+HEADERS += \
+    src/process.h

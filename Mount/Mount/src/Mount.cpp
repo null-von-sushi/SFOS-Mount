@@ -1,11 +1,15 @@
 #ifdef QT_QML_DEBUG
 #include <QtQuick>
+#include <QtQml>
+#include "process.h"
 #endif
 
 #include <sailfishapp.h>
 
 int main(int argc, char *argv[])
 {
+    qmlRegisterType<Process>("Process", 1, 0, "Process");
+
     // SailfishApp::main() will display "qml/Mount.qml", if you need more
     // control over initialization, you can use:
     //

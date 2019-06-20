@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.1">
+<context>
+    <name>About</name>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 <context>
     <name>CoverPage</name>
     <message>
@@ -9,29 +16,31 @@
     </message>
 </context>
 <context>
+    <name>EditItem</name>
+    <message>
+        <source></source>
+        <translation></translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
-        <source>Show Page 2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>UI Template</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hello Sailors</source>
+        <source>Mount</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>SecondPage</name>
+    <name>Help_davfs</name>
     <message>
-        <source>Nested Page</source>
+        <source>davfs2</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>ShowCard</name>
     <message>
-        <source>Item</source>
-        <translation type="unfinished"></translation>
+        <source></source>
+        <translation></translation>
     </message>
 </context>
 </TS>
