@@ -233,8 +233,20 @@ Page {
                                // http(s)://addres:<port>/path /mount/point
 
 
+                                if (model.type == "auto") {
+                                    if (model.args != undefined) {
+                                        mountProcess.start("/usr/bin/sudo", [ model.device, model.path], "-o", + model.args);
+                                    }
+                                    if (model.args == undefined) {
+                                        mountProcess.start("/bin/mount", [ model.device, model.path]);
+                                    }
+                                }
+
+                                if (model.type != "auto") {
+                                    mountProcess.start("/bin/mount", [ model.device, model.path]);
+                                }
+
                                 var command
-                                command = "/bin/mount "
                                 console.log("model.type: " + model.type)
                                 if ( model.type != "auto") {
                                     command = command + "-t " + model.type + " " //.toString() not necessary?
@@ -259,8 +271,7 @@ Page {
                                     console.log("device was specified, command is now: " + command )
                                 }
 
-                                console.log("/usr/bin/sudo " + command)
-                                mountProcess.start("/usr/bin/sudo", [ command ]);
+                                //mountProcess.start("/usr/bin/sudo", [ command ]);
 
 
 
